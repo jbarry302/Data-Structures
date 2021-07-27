@@ -11,7 +11,7 @@
  *				DS_Stack <MyObj> myCustomObject = new DS_Stack <MyObj> (my_length);
  *
  * @author	github.com/jbarry302
- * @version 1.00
+ * @version	1.00
  * @since	2021/7/26
  */
 
@@ -33,7 +33,7 @@ public class DS_Stack <T> {
     
     /* Constructor for setting a specific size of this stack.
      * @param   maxSize
-     *			the maximum capacity that this stack can hold.
+     *		the maximum capacity that this stack can hold.
      */
     public DS_Stack(int maxSize){
     	if(maxSize < 1) throw new IllegalArgumentException("value must be > 1");
@@ -43,10 +43,10 @@ public class DS_Stack <T> {
     }
     
     /* Adds an element at the top of this stack.
-     * @param       element
-     *	            the object to be added at the top of the stack
+     * @param       	element
+     *	            	the object to be added at the top of the stack
      * @exception	IndexOutOfBoundsException
-     *				when you try to call this method and the {@code maxSize} limit is reached.
+     *			when you try to call this method and the {@code maxSize} limit is reached.
      */
     public void push(Object element){
     	ensureNonNull();
@@ -59,7 +59,7 @@ public class DS_Stack <T> {
     /* Removes the current element at the top of this stack.
      * @return		the current element at the top of this stack
      * @exception	IndexOutOfBoundsException
-     *				if you try to call this method in an empty stack.
+     *			if you try to call this method in an empty stack.
      */
     public Object pop(){
     	ensureNonNull();
@@ -92,11 +92,11 @@ public class DS_Stack <T> {
     }
     
     /* @param		value
-     *				the element to be searched in the stack
+     *			the element to be searched in the stack
      * @return		the index of the {@param value} if it exists in the stack,
-     *				-1 if it does not exist.
+     *			-1 if it does not exist.
      * @exception	IndexOutOfBoundsException
-     *				if you try to use this method in an empty stack.*/
+     *			if you try to use this method in an empty stack.*/
     public int indexOf(Object value){
     	ensureNonNull();
     	if(pointer < 1)
