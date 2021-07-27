@@ -32,7 +32,7 @@ public class DS_Stack <T> {
     }
     
     /* Constructor for setting a specific size of this stack.
-     * @param	maxSize
+     * @param   maxSize
      *			the maximum capacity that this stack can hold.
      */
     public DS_Stack(int maxSize){
@@ -43,8 +43,8 @@ public class DS_Stack <T> {
     }
     
     /* Adds an element at the top of this stack.
-     * @param		element
-     *				the object to be added at the top of the stack
+     * @param       element
+     *	            the object to be added at the top of the stack
      * @exception	IndexOutOfBoundsException
      *				when you try to call this method and the {@code maxSize} limit is reached.
      */
