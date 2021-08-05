@@ -7,11 +7,11 @@
  * 
  * @implNote	This stack is designed to be generic so it can be used in <b>any</b> reference types.
  *				sample declarations:
- *				DS_Stack <String> myString = new DS_Stack <String>();
- *				DS_Stack <MyObj> myCustomObject = new DS_Stack <MyObj> (my_length);
+ *					DS_Stack <String> myString = new DS_Stack <String>();
+ *					DS_Stack <MyObj> myCustomObject = new DS_Stack <MyObj> (my_length);
  *
  * @author	github.com/jbarry302
- * @version 1.01
+ * @version	1.01
  * @since	2021/7/26
  */
 
@@ -25,7 +25,7 @@ public class DS_Stack <T> {
 	private int pointer = 0;
 	
 	
-	/* Default Constructor length set at 1024 (author preference) */
+    /* Default Constructor length set at 1024 (author preference) */
     public DS_Stack() {
    		this.maxSize = DEFAULT_LENGTH;
    		stack = new Object[maxSize];
@@ -124,6 +124,7 @@ public class DS_Stack <T> {
     	}
     	return sb.append("]").toString();
     }
+	
     /* Ensures that this stack cannot use the possible methods above if declared as null. */
     private final void ensureNonNull(){
     	if(this == null)
