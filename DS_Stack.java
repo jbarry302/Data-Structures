@@ -11,7 +11,7 @@
  *				DS_Stack <MyObj> myCustomObject = new DS_Stack <MyObj> (my_length);
  *
  * @author	github.com/jbarry302
- * @version	1.00
+ * @version 1.01
  * @since	2021/7/26
  */
 
@@ -33,20 +33,19 @@ public class DS_Stack <T> {
     
     /* Constructor for setting a specific size of this stack.
      * @param   maxSize
-     *		the maximum capacity that this stack can hold.
+     *			the maximum capacity that this stack can hold.
      */
     public DS_Stack(int maxSize){
-    	if(maxSize < 1) throw new IllegalArgumentException("value must be > 1");
+    	if(maxSize < 1) throw new IllegalArgumentException("value must be >= 1");
     	
     	this.maxSize = maxSize;
     	stack = new Object[maxSize];
     }
     
     /* Adds an element at the top of this stack.
-     * @param       	element
-     *	            	the object to be added at the top of the stack
+     * @param       element
+     *	            the object to be added at the top of the stack
      * @exception	IndexOutOfBoundsException
-     *			when you try to call this method and the {@code maxSize} limit is reached.
      */
     public void push(Object element){
     	ensureNonNull();
@@ -59,7 +58,6 @@ public class DS_Stack <T> {
     /* Removes the current element at the top of this stack.
      * @return		the current element at the top of this stack
      * @exception	IndexOutOfBoundsException
-     *			if you try to call this method in an empty stack.
      */
     public Object pop(){
     	ensureNonNull();
@@ -70,7 +68,8 @@ public class DS_Stack <T> {
     }
     
     /* @return		the current element at the top of this stack.
-     * @exception	if you try to call this method in an empty stack.*/
+     * @exception	IndexOutOfBoundsException
+     */
     public Object peek(){
     	ensureNonNull();
     	if(this.isEmpty())
@@ -92,11 +91,11 @@ public class DS_Stack <T> {
     }
     
     /* @param		value
-     *			the element to be searched in the stack
+     *				the element to be searched in the stack
      * @return		the index of the {@param value} if it exists in the stack,
-     *			-1 if it does not exist.
+     *				-1 if it does not exist.
      * @exception	IndexOutOfBoundsException
-     *			if you try to use this method in an empty stack.*/
+     */
     public int indexOf(Object value){
     	ensureNonNull();
     	if(pointer < 1)
@@ -118,16 +117,15 @@ public class DS_Stack <T> {
     	StringBuilder sb = new StringBuilder("[");
     	for(int i = 0; i < pointer; i++){
     		if(i < pointer-1){
-    			sb.append((""+stack[i]+", "));
+    			sb.append(stack[i]+", ");
     		} else {
-    			sb.append((""+stack[i]));
+    			sb.append(stack[i]);
     		}
     	}
     	return sb.append("]").toString();
     }
-    
     /* Ensures that this stack cannot use the possible methods above if declared as null. */
-    public void ensureNonNull(){
+    private final void ensureNonNull(){
     	if(this == null)
     		throw new NullPointerException("Stack is null.");
     }
