@@ -6,9 +6,9 @@
  * against the pre-defined stack data structure in the java programming language. </p>
  * 
  * @implNote	This stack is designed to be generic so it can be used in <b>any</b> reference types.
- *				sample declarations:
- *					DS_Stack <String> myString = new DS_Stack <String>();
- *					DS_Stack <MyObj> myCustomObject = new DS_Stack <MyObj> (my_length);
+ *		sample declarations:
+ *			DS_Stack <String> myString = new DS_Stack <String>();
+ *			DS_Stack <MyObj> myCustomObject = new DS_Stack <MyObj> (my_length);
  *
  * @author	github.com/jbarry302
  * @version	1.01
@@ -33,7 +33,7 @@ public class DS_Stack <T> {
     
     /* Constructor for setting a specific size of this stack.
      * @param   maxSize
-     *			the maximum capacity that this stack can hold.
+     *		the maximum capacity that this stack can hold.
      */
     public DS_Stack(int maxSize){
     	if(maxSize < 1) throw new IllegalArgumentException("value must be >= 1");
@@ -43,8 +43,8 @@ public class DS_Stack <T> {
     }
     
     /* Adds an element at the top of this stack.
-     * @param       element
-     *	            the object to be added at the top of the stack
+     * @param       	element
+     *	            	the object to be added at the top of the stack
      * @exception	IndexOutOfBoundsException
      */
     public void push(Object element){
@@ -91,9 +91,9 @@ public class DS_Stack <T> {
     }
     
     /* @param		value
-     *				the element to be searched in the stack
+     *			the element to be searched in the stack
      * @return		the index of the {@param value} if it exists in the stack,
-     *				-1 if it does not exist.
+     *			-1 if it does not exist.
      * @exception	IndexOutOfBoundsException
      */
     public int indexOf(Object value){
