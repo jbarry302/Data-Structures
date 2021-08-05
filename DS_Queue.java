@@ -51,7 +51,7 @@ public class DS_Queue <T> {
      */
     public DS_Queue(int MAX_SIZE) {
     	if(MAX_SIZE < 1) 
-    		throw new IllegalArgumentException("value must be >= 0");
+    		throw new IllegalArgumentException("value must be > 0");
     	
     	this.MAX_SIZE	= MAX_SIZE;
     	SHIFT_THRESOLD	= (int)(MAX_SIZE * 0.3);
