@@ -36,18 +36,18 @@ public class DS_Queue <T> {
 
     /* Default Constructor length set at 1024 (author preference) */
     public DS_Queue() {
-    	MAX_SIZE 		= DEFAULT_LENGTH;
+    	MAX_SIZE 	= DEFAULT_LENGTH;
     	SHIFT_THRESOLD	= (int)(MAX_SIZE * 0.3);
     	
-    	queue			= new Object[MAX_SIZE];
+    	queue		= new Object[MAX_SIZE];
     	start_pointer	= MAX_SIZE-1;
-    	end_pointer		= MAX_SIZE-1;
+    	end_pointer	= MAX_SIZE-1;
     	dynamic_length	= 0;
     }
     
     /* Constructor for setting a specific size of this queue.
      * @param   MAX_SIZE
-     *			the maximum capacity that this queue can hold.
+     *		the maximum capacity that this queue can hold.
      */
     public DS_Queue(int MAX_SIZE) {
     	if(MAX_SIZE < 1) 
@@ -56,16 +56,16 @@ public class DS_Queue <T> {
     	this.MAX_SIZE	= MAX_SIZE;
     	SHIFT_THRESOLD	= (int)(MAX_SIZE * 0.3);
 
-    	queue			= new Object[MAX_SIZE];
+    	queue		= new Object[MAX_SIZE];
     	start_pointer	= MAX_SIZE-1;
-    	end_pointer		= MAX_SIZE-1;
+    	end_pointer	= MAX_SIZE-1;
     	dynamic_length	= 0;
     }
     
     
     /* Adds an element at the top of this queue.
-     * @param       element
-     *	            inserts an element at the start of this queue
+     * @param       	element
+     *	            	inserts an element at the start of this queue
      * @exception	IndexOutOfBoundsException
      */
     public void insert(Object element){
