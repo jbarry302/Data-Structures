@@ -28,7 +28,7 @@ public class DS_Queue <T> {
 
 	
 	//the {@code start_pointer} will be used to represent the elements at the start of this queue (aka rear)
-	//the {@code end_pointer} will be used to represent the elements at the end of this queue (aka top)
+	//the {@code end_pointer} will be used to represent the elements at the end of this queue (aka front)
 	private int start_pointer;
 	private int end_pointer;
 	private int dynamic_length;
