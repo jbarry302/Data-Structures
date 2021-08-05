@@ -142,12 +142,12 @@ public class DS_Queue <T> {
     
     /* This method will be used to clear empty spaces in the queue
      * because of how the insert and remove operation is implemented.
-     * When the remove() is called the size shrinks but that element
-     * is still at the background but we are not allowed to see it.
+     * When the {@code remove()} is called the queue size shrinks but that
+     * element is still at the background and we are just not allowed to see it.
      *
      * @implNote	{@code shiftRight()} will not be triggered unless
-     *				30% of the queue is left and atleast 30% of the element
-     *				in the queue is removed.
+     *			30% of the queue is left and atleast 30% of the element
+     *			in the queue is removed.
      */
     private final void shiftRight() {
     	int length = MAX_SIZE;
