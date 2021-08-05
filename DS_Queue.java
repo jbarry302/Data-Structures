@@ -6,9 +6,9 @@
  * against the pre-defined Queue data structure in the java programming language. </p>
  * 
  * @implNote	This queue is designed to be generic so it can be used in <b>any</b> reference types.
- *				sample declarations:
- *					DS_Queue <String> myString = new DS_Queue <String>();
- *					DS_Queue <MyObj> myCustomObject = new DS_Queue <MyObj> (my_length);
+ *		sample declarations:
+ *			DS_Queue <String> myString = new DS_Queue <String>();
+ *			DS_Queue <MyObj> myCustomObject = new DS_Queue <MyObj> (my_length);
  *
  * @author	github.com/jbarry302
  * @version	1.00
