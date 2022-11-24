@@ -15,7 +15,7 @@ public class BracketEquality {
         Stack<Character> ss  = new Stack<Character>();
         String e = "(({()})))";
 		
-		for(String input : e.split("")) {
+	for(String input : e.split("")) {
             char c = input.charAt(0);
             switch(c) {
                 case '(': 
@@ -36,7 +36,7 @@ public class BracketEquality {
                     break;
                 }
             }
-		}
+	}
         
         System.out.println(ss.isEmpty());
     }
