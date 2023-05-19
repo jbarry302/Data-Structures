@@ -1,3 +1,11 @@
+/**
+ * DS_DoubleLinkedList
+ * My implementation of a doubly linkedlist
+ * 
+ * @author github.com/jbarry302
+ * @since 2023/5/19
+ */
+
 public class DS_DoubleLinkedList<T> {
 
     private class Node<T> {
