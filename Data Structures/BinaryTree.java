@@ -24,20 +24,22 @@ public class BinaryTree {
                 root = new Node(val);
                 s("initial insert: %d", val);
             } else {
-                Node child = root;
+                Node curr = root;
                 while(true) {
-                    if(val >= child.val) { 
-                        child = child.right;
+                    if(curr.val < val) {
+                        if(curr.left == null) {
+                            curr.left = new Node(val);
+                            return;
+                        }
+                        curr = curr.left;
                     } else {
-                        child = child.left;
-                    }
-                    if(child == null) {
-                        child = new Node(val);
-                        s("insert next: %d", val);
-                        return;
+                        if(curr.right == null) {
+                            curr.right = new Node(val);
+                            return;
+                        }
+                        curr = curr.right;
                     }
                 }
-                
             }
         }
 
